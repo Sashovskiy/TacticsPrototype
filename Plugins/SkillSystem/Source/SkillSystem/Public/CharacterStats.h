@@ -4,13 +4,14 @@
 
 //#include "CoreMinimal.h"
 #include "Engine.h"
+#include "StructOfOnePlayerStat.h"
 #include "Engine/DataAsset.h"
 #include "CharacterStats.generated.h"
 
 /**
  * 
  */
-USTRUCT(BlueprintType)
+ /*USTRUCT(BlueprintType)
 struct FBaceStatOfChar {
 
 	GENERATED_USTRUCT_BODY()
@@ -38,7 +39,7 @@ struct FBaceStatOfChar {
 			StatName = NewName; MaxPointOfStat = NewMaxStat; MinPointOfStat = NewMinStat; CurrentPointOfStat = NewCurrentStat;
 		 }
 		  }
-};
+};*/
 
 
 UCLASS()
@@ -46,7 +47,11 @@ class SKILLSYSTEM_API UCharacterStats : public UDataAsset
 {
 	GENERATED_BODY()
 
+
+
+
+
 	UPROPERTY(EditAnywhere)
-		TArray<FBaceStatOfChar> BaseStat;
-		///s
+		TArray<FOneStat> BaseStat;
+	UCharacterStats();
 };
